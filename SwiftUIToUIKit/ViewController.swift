@@ -28,4 +28,9 @@ private extension ViewController {
         button.backgroundColor = .systemIndigo
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
     }
+
+    @objc func didTapButton() {
+        let vc = UIHostingController(rootView: SettingsScreen())
+        present(vc, animated: true)
+    }
 }
